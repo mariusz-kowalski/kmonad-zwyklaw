@@ -1,0 +1,19 @@
+[4mPermissions[0m [4mSize[0m [4mUser[0m [4mDate Modified[0m [4mName[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:47[0m  [36mpci-0000:00:14.0-usb-0:2:1.0-event[0m [1;90m->[0m [36m../[1;33mevent24[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:47[0m  [36mpci-0000:00:14.0-usb-0:2:1.0-event-kbd[0m [1;90m->[0m [36m../[1;33mevent23[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:47[0m  [36mpci-0000:00:14.0-usb-0:2:1.1-event-mouse[0m [1;90m->[0m [36m../[1;33mevent25[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:47[0m  [36mpci-0000:00:14.0-usb-0:2:1.1-mouse[0m [1;90m->[0m [36m../[1;33mmouse5[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:44[0m  [36mpci-0000:00:14.0-usb-0:9:1.0-event[0m [1;90m->[0m [36m../[1;33mevent5[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:47[0m  [36mpci-0000:00:14.0-usbv2-0:2:1.0-event[0m [1;90m->[0m [36m../[1;33mevent24[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:47[0m  [36mpci-0000:00:14.0-usbv2-0:2:1.0-event-kbd[0m [1;90m->[0m [36m../[1;33mevent23[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:47[0m  [36mpci-0000:00:14.0-usbv2-0:2:1.1-event-mouse[0m [1;90m->[0m [36m../[1;33mevent25[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:47[0m  [36mpci-0000:00:14.0-usbv2-0:2:1.1-mouse[0m [1;90m->[0m [36m../[1;33mmouse5[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:44[0m  [36mpci-0000:00:14.0-usbv2-0:9:1.0-event[0m [1;90m->[0m [36m../[1;33mevent5[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:44[0m  [36mpci-0000:00:15.1-platform-i2c_designware.1-event-mouse[0m [1;90m->[0m [36m../[1;33mevent15[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:44[0m  [36mpci-0000:00:15.1-platform-i2c_designware.1-mouse[0m [1;90m->[0m [36m../[1;33mmouse1[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:44[0m  [36mplatform-i8042-serio-0-event-kbd[0m [1;90m->[0m [36m../[1;33mevent4[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:44[0m  [36mplatform-i8042-serio-1-event-mouse[0m [1;90m->[0m [36m../[1;33mevent21[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:44[0m  [36mplatform-i8042-serio-1-mouse[0m [1;90m->[0m [36m../[1;33mmouse3[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:44[0m  [36mplatform-INT33D5:00-event[0m [1;90m->[0m [36m../[1;33mevent11[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:44[0m  [36mplatform-pcspkr-event-spkr[0m [1;90m->[0m [36m../[1;33mevent12[0m
+[36ml[1;33mr[31mw[32mx[0m[33mr[31mw[32mx[33mr[31mw[32mx[0m     [1;90m-[0m root [34m 8 Jul 11:44[0m  [36mplatform-PNP0C14:03-event[0m [1;90m->[0m [36m../[1;33mevent13[0m
