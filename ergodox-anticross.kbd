@@ -1,0 +1,134 @@
+(defcfg
+	input  (device-file "/dev/input/by-id/usb-ZSA_Technology_Labs_Ergodox_EZ-event-kbd")
+	output (uinput-sink "KMonad ergo")
+	cmp-seq ralt
+	cmp-seq-delay 5
+
+	fallthrough true
+	allow-cmd true
+	implicit-around around
+)
+
+#| ------------------------------------------------------------------SRC------------------------------------------------------------------------------- |#
+(defsrc
+
+esc	1	2	3	4	5	f11						f12	6	7	8	9	0	bspc
+tab	q	w	e	r	t	-						;	y	u	i	o	p	del
+lshift	a	s	d	f	g								h	j	k	l	f4	ins
+'	z	x	c	v	b	ret						kprt	n	m	\	f5	[	pgup
+`	f1	=	f2	f3										f6	/	.	f10	pgdn
+
+							left	right		home	end
+								lalt		up
+						spc	lctrl	lmeta		down	,	ralt
+
+)
+
+
+
+#| -----------------------------------------------------------------ALIAS------------------------------------------------------------------------------ |#
+(defalias
+
+	esc	(tap-hold	250	esc	RA-esc	)
+	tab	(tap-hold	250	tab	C-tab	)
+
+	f1	(tap-hold	250	!	( tap-macro ! ret )	)
+	f2	(tap-hold	250	?	( tap-macro ? ret )	)
+	f3	(tap-hold	250	;	^	)
+	f4	(tap-hold	250	{	}	)
+	f6	(tap-hold	250	~	<	)
+	f5	(tap-hold	250	|	( tap-macro | | left )	)
+	f10	(tap-hold	250	\(	\)	)
+	f11	(tap-hold	250	*	f11	)
+	f12	(tap-hold	250	#	f12	)
+
+	1	(tap-hold	250	1	f1	)
+	2	(tap-hold	250	2	f2	)
+	3	(tap-hold	250	3	f3	)
+	4	(tap-hold	250	4	f4	)
+	5	(tap-hold	250	5	f5	)
+	6	(tap-hold	250	6	f6	)
+	7	(tap-hold	250	7	f7	)
+	8	(tap-hold	250	8	f8	)
+	9	(tap-hold	250	9	f9	)
+	0	(tap-hold	250	0	f10	)
+
+	q	(tap-hold	250	q	RA-q	)
+	w	(tap-hold	250	w	RA-w	)
+	e	(tap-hold	250	e	RA-e	)
+	r	(tap-hold	250	r	RA-r	)
+	t	(tap-hold	250	t	RA-t	)
+	y	(tap-hold	250	y	RA-y	)
+	u	(tap-hold	250	u	RA-u	)
+	i	(tap-hold	250	i	RA-i	)
+	o	(tap-hold	250	o	RA-o	)
+	p	(tap-hold	250	p	RA-p	)
+
+	a	(tap-hold	250	a	RA-a	)
+	s	(tap-hold	250	s	RA-s	)
+	d	(tap-hold	250	d	RA-d	)
+	f	(tap-hold	250	f	RA-f	)
+	g	(tap-hold	250	g	RA-g	)
+	h	(tap-hold	250	h	RA-h	)
+	j	(tap-hold	250	j	RA-j	)
+	k	(tap-hold	250	k	RA-k	)
+	l	(tap-hold	250	l	RA-l	)
+
+	z	(tap-hold	250	z	RA-z	)
+	x	(tap-hold	250	x	RA-x	)
+	c	(tap-hold	250	c	RA-c	)
+	v	(tap-hold	250	v	RA-v	)
+	b	(tap-hold	250	b	RA-b	)
+	n	(tap-hold	250	n	RA-n	)
+	m	(tap-hold	250	m	RA-m	)
+
+	spc	(tap-hold	250	spc	lshift	)
+	bspc	(tap-hold	250	bspc	C-bspc	)
+	del	(tap-hold	250	del	C-del	)
+	ins	(tap-hold	250	$	}	)
+	pgup	(tap-hold	250	@	]	)
+	pgdn	(tap-hold	250	&	\)	)
+
+	left	(tap-hold	250	C-left	left	)
+	right	(tap-hold	250	C-right	right	)
+	up	(tap-hold	250	up	pgup	)
+	down	(tap-hold	250	down	pgdn	)
+
+	home	(tap-hold	250	left	home	)
+	end	(tap-hold	250	right	end	)
+
+	-	(tap-hold	250	-	( tap-macro - = )	)
+	;	(tap-hold	250	:	( tap-macro : = )	)
+	'	(tap-hold	250	'	( tap-macro % q \( \) left )	)
+	\	(tap-hold	250	\	( tap-macro % r \( \) left )	)
+	[	(tap-hold	250	[	]	)
+	`	(tap-hold	250	`	+	)
+	=	(tap-hold	250	=	( tap-macro spc = = spc )	)
+	/	(tap-hold	250	/	%	)
+	.	(tap-hold	250	.	>	)
+	,	(tap-hold	250	,	rctrl	)
+
+	lshift	(tap-hold	250     "	( tap-macro % Q \( \) left )	)
+	ret	(tap-hold	250	ret	RA-ret	)
+	kprt	(tap-hold	250	kprt	RA-kprt	)
+	lalt	(tap-hold	250	up	lalt	)
+	lctrl	(tap-hold	250	\_	lctrl	)
+	lmeta	(tap-hold	250	down	lmeta	)
+	ralt	(tap-hold	250	spc	rshift	)
+)
+
+
+
+#| -----------------------------------------------------------------LAYER-0---------------------------------------------------------------------------- |#
+(deflayer turbo1
+
+esc	@1	@2	@3	@4	@5	@f11						@f12	@6	@7	@8	@9	@0	@bspc
+@tab	q	w	@e	r	t	@-						@;	y	u	i	@o	p	@del
+@lshift	@a	@s	d	f	g								h	j	k	@l	@f4	@ins
+@'	@z	@x	@c	v	b	ret						kprt	@n	m	@\	@f5	@[	@pgup
+@`	@f1	@=	@f2	@f3										@f6	@/	@.	@f10	@pgdn
+
+							@left	@right		@home	@end
+								@lalt		@up
+						@spc	@lctrl	@lmeta		@down	@,	@ralt
+)

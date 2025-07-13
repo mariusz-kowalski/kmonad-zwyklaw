@@ -8,3 +8,4 @@ install() {
 
 install precision5520
 install k400
+install ergodox-anticross
