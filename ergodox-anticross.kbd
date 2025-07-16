@@ -89,8 +89,8 @@ lshift	a	s	d	f	g								h	j	k	l	f4	ins
 	pgup	(tap-hold	250	@	( tap-macro ] )	)
 	pgdn	(tap-hold	250	&	( tap-macro \) )	)
 
-	left	(tap-hold	250	C-left	( tap-macro left )	)
-	right	(tap-hold	250	C-right	( tap-macro right )	)
+	left	(tap-hold	250	left	( tap-macro C-left )	)
+	right	(tap-hold	250	right	( tap-macro C-right )	)
 	up	(tap-hold	250	up	( tap-macro pgup )	)
 	down	(tap-hold	250	down	( tap-macro pgdn )	)
 
