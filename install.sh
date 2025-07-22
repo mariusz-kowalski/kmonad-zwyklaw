@@ -9,3 +9,5 @@ install() {
 install precision5520
 install k400
 install ergodox-anticross
+install lenovo-ultra-nav-base
+install lenovo-ultra-nav-control

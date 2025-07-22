@@ -5,7 +5,7 @@
 	cmp-seq-delay 5
 
 	fallthrough true
-	allow-cmd true
+	allow-cmd false
 	implicit-around around
 )
 
@@ -19,7 +19,9 @@ lctl	lmet	lalt			spc				ralt	rmet	cmp	rctl		left	down	right
 )
 
 (defalias
-esc	(tap-hold	200	esc	RA-esc	)
+esc	(tap-hold	250	esc	( tap-macro C-esc )	)
+tab	(tap-hold	250	tab	( tap-macro C-tab )	)
+
 f1	(tap-hold	200	f1	RA-f1	)
 f2	(tap-hold	200	f2	RA-f2	)
 f3	(tap-hold	200	f3	RA-f3	)
@@ -49,7 +51,6 @@ grv	(tap-hold	200	grv	RS-grv	)
 -	(tap-hold	200	-	RS--	)
 =	(tap-hold	200	=	RS-=	)
 bspc	(tap-hold	200	bspc	RS-bspc	)
-tab	(tap-hold	200	tab	RS-tab	)
 q	(tap-hold	200	q	RA-q	)
 w	(tap-hold	200	w	RA-w	)
 e	(tap-hold	200	e	RA-e	)

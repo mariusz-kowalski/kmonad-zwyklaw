@@ -1,0 +1,33 @@
+(defcfg
+	;; input  (device-file "/dev/input/by-id/usb-Lite-On_Tech_Lenovo_USB_Travel_Keyboard_with_Ultra_Nav-event-kbd")
+	input  (device-file "/dev/input/by-id/usb-Lite-On_Tech_Lenovo_USB_Travel_Keyboard_with_Ultra_Nav-event-if01")
+	;; input  (device-file "/dev/input/by-id/usb-Lite-On_Tech_Lenovo_USB_Travel_Keyboard_with_Ultra_Nav-if01-event-mouse")
+	output (uinput-sink "KMonad ultra_nav")
+	cmp-seq ralt
+	cmp-seq-delay 5
+
+	fallthrough false
+	allow-cmd false
+	implicit-around around
+)
+
+
+(defsrc
+;;	toolbox
+	BrlDot5	vold	volu	mute
+;; FN+	F3		F4	F5		F7					F12		Home	End
+	missing0x1ef	sleep	missing0x1f0	brldot1					brldot2		brldot3	brldot4
+
+;; FN+	space
+	BrlDot7
+)
+
+(deflayer default
+;;	toolbox
+	BrlDot5	_	_	_
+;; FN+	F3		F4	F5		F7					F12		Home	End
+	missing0x1ef	sleep	missing0x1f0	brldot1					brldot2		brldot3	brldot4
+
+;; FN+	space
+	met
+)

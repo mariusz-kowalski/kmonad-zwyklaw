@@ -5,7 +5,7 @@
 	cmp-seq-delay 5
 
 	fallthrough true
-	allow-cmd true
+	allow-cmd false
 	implicit-around around
 )
 

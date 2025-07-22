@@ -1,0 +1,122 @@
+(defcfg
+	input  (device-file "/dev/input/by-id/usb-Lite-On_Tech_Lenovo_USB_Travel_Keyboard_with_Ultra_Nav-event-kbd")
+	;; input  (device-file "/dev/input/by-id/usb-Lite-On_Tech_Lenovo_USB_Travel_Keyboard_with_Ultra_Nav-event-if01")
+	;; input  (device-file "/dev/input/by-id/usb-Lite-On_Tech_Lenovo_USB_Travel_Keyboard_with_Ultra_Nav-if01-event-mouse")
+	output (uinput-sink "KMonad ultra_nav")
+	cmp-seq ralt
+	cmp-seq-delay 5
+
+	fallthrough false
+	allow-cmd false
+	implicit-around around
+)
+
+
+(defsrc
+esc									sys	slck	pause		ins	home	pgup
+f1	f2	f3	f4	f5	f6	f7	f8	f9	f10	f11	f12		del	end	pgdn
+grv	1	2	3	4	5	6	7	8	9	0	-	=	bspc
+tab	q	w	e	r	t	y	u	i	o	p	[	]
+caps	a	s	d	f	g	h	j	k	l	;	'	\	ret
+lsft	nubs	z	x	c	v	b	n	m	,	.	/		rsft
+	lctl	lalt				spc					ralt	rctl			up
+														left	down	right
+)
+
+
+(defalias
+
+;; common
+
+esc	(tap-hold	250	esc	( tap-macro C-esc )	)
+tab	(tap-hold	250	tab	( tap-macro C-tab )	)
+
+1	(tap-hold	250	1	RS-1	)
+2	(tap-hold	250	2	RS-2	)
+3	(tap-hold	250	3	RS-3	)
+4	(tap-hold	250	4	RS-4	)
+5	(tap-hold	250	5	RS-5	)
+6	(tap-hold	250	6	RS-6	)
+7	(tap-hold	250	7	RS-7	)
+8	(tap-hold	250	8	RS-8	)
+9	(tap-hold	250	9	RS-9	)
+0	(tap-hold	250	0	RS-0	)
+
+q	(tap-hold	250	q	( tap-macro RA-q )	)
+w	(tap-hold	250	w	( tap-macro RA-w )	)
+e	(tap-hold	250	e	( tap-macro RA-e )	)
+r	(tap-hold	250	r	( tap-macro RA-r )	)
+t	(tap-hold	250	t	( tap-macro RA-t )	)
+y	(tap-hold	250	y	( tap-macro RA-y )	)
+u	(tap-hold	250	u	( tap-macro RA-u )	)
+i	(tap-hold	250	i	( tap-macro RA-i )	)
+o	(tap-hold	250	o	( tap-macro RA-o )	)
+p	(tap-hold	250	p	( tap-macro RA-p )	)
+
+a	(tap-hold	250	a	( tap-macro RA-a )	)
+s	(tap-hold	250	s	( tap-macro RA-s )	)
+d	(tap-hold	250	d	( tap-macro RA-d )	)
+f	(tap-hold	250	f	( tap-macro RA-f )	)
+g	(tap-hold	250	g	( tap-macro RA-g )	)
+h	(tap-hold	250	h	( tap-macro RA-h )	)
+j	(tap-hold	250	j	( tap-macro RA-j )	)
+k	(tap-hold	250	k	( tap-macro RA-k )	)
+l	(tap-hold	250	l	( tap-macro RA-l )	)
+
+z	(tap-hold	250	z	( tap-macro RA-z )	)
+x	(tap-hold	250	x	( tap-macro RA-x )	)
+c	(tap-hold	250	c	( tap-macro RA-c )	)
+v	(tap-hold	250	v	( tap-macro RA-v )	)
+b	(tap-hold	250	b	( tap-macro RA-b )	)
+n	(tap-hold	250	n	( tap-macro RA-n )	)
+m	(tap-hold	250	m	( tap-macro RA-m )	)
+
+-	(tap-hold	250	#	( tap-macro home # )	)
+=	(tap-hold	250	=	RS-=	)
+
+
+[	(tap-hold	250	@	@	)
+]	(tap-hold	250	{	}	)
+
+;	(tap-hold	250	\	( tap-macro % r \( \) left )	)
+'	(tap-hold	250	|	( tap-macro | | left )	)
+\	(tap-hold	250	[	]	)
+
+,	(tap-hold	250	~	<	)
+.	(tap-hold	250	/	%	)
+/	(tap-hold	250	.	>	)
+
+spc	(tap-hold	250	spc	lshift	)
+bspc	(tap-hold	250	bspc	( tap-macro C-bspc )	)
+del	(tap-hold	250	del	( tap-macro C-del )	)
+
+nubs	(tap-hold	250	?	( tap-macro ? ret )	)
+grv	(tap-hold	250	$	$	)
+
+left	(tap-hold	250	left	( tap-macro C-left )	)
+right	(tap-hold	250	right	( tap-macro C-right )	)
+up	(tap-hold	250	up	( tap-macro pgup )	)
+down	(tap-hold	250	down	( tap-macro pgdn )	)
+
+caps	(tap-hold	250	"	lctrl	)
+lsft	(tap-hold	250	'	( tap-macro % q \( \) left )	)
+lctl	(tap-hold	250	`	lmet	)
+lalt	(tap-hold	250	\_	lalt	)
+
+ralt	(tap-hold	250	,	ralt	)
+rctl	(tap-hold	250	-	rctl	)
+rsft	(tap-hold	250	:	;	)
+
+
+)
+
+(deflayer base
+@esc									sys	slck	pause		ins	home	pgup
+f1	f2	f3	f4	f5	f6	f7	f8	f9	f10	f11	f12		del	end	pgdn
+@grv	@1	@2	@3	@4	@5	@6	@7	@8	@9	@0	@-	@=	@bspc
+@tab	q	w	@e	r	t	y	u	i	@o	p	@[	@]
+@caps	@a	@s	d	f	g	h	j	k	@l	@;	@'	@\	ret
+@lsft	@nubs	@z	@x	@c	v	b	@n	m	@,	@.	@/		@rsft
+	@lctl	@lalt				@spc					@ralt	@rctl			@up
+														@left	@down	@right
+)
