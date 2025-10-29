@@ -17,7 +17,8 @@ config_device_path() {
 
 install_config() {
   local config_file="$1"
-  local name="$(basename "$config_file" .kbd)"
+  local filename="${config_file##*/}"
+  local name="${filename%.kbd}"
   local target="$CONFIG_DIR/$name.kbd"
   local service="kmonad@$name.service"
 
